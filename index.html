@@ -9,49 +9,39 @@
 
 <body>
 
-<audio id="music" src="music.mp3" loop autoplay muted></audio>
+<audio id="music1" src="music1.mp3" loop autoplay muted></audio>
+<audio id="music2" src="music2.mp3" loop></audio>
 
-<!-- CARD WRAP -->
 <div class="wrapper">
 
   <div class="card" id="card">
 
-    <!-- DEPAN (cover) -->
+    <!-- HALAMAN DEPAN -->
     <div class="front" onclick="openCard()">
-      <h2>🌙 Klik untuk membuka</h2>
+      <h2>🌙 Tap untuk membuka</h2>
     </div>
 
-    <!-- DALAM -->
+    <!-- HALAMAN DALAM -->
     <div class="back">
 
-      <!-- MASJID -->
-      <div class="mosque"></div>
+      <canvas id="particles"></canvas>
 
-      <!-- FOTO -->
-      <img src="https://i.ibb.co.com/Pspvz9RZ/foto.png" class="foto">
+      <img id="foto" class="foto">
 
       <h1>Selamat Hari Raya</h1>
       <h2>Idul Fitri</h2>
 
       <p class="text">
-        Taqabbalallahu minna wa minkum  
-        Shiyamana wa shiyamakum 🤍<br><br>
-
-        Di hari yang suci ini,  
-        izinkan kami memohon maaf  
-        atas segala khilaf dan salah 🙏<br><br>
-
-        Semoga Allah menerima amal ibadah kita,  
-        melimpahkan keberkahan,  
-        dan mempertemukan kita kembali  
-        dengan Ramadhan berikutnya 🌙
+        Taqabbalallahu minna wa minkum 🤍<br><br>
+        Mohon maaf lahir dan batin 🙏<br><br>
+        Semoga keberkahan dan kebahagiaan  
+        selalu menyertai kita semua
       </p>
 
       <p class="tahun">1447 H / 2026 M</p>
 
       <h3 id="nama"></h3>
 
-      <button onclick="toggleMusic()">🎵 Musik</button>
       <button onclick="shareWA()">📤 Share</button>
 
     </div>
