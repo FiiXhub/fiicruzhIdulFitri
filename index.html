@@ -3,42 +3,38 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ucapan Idul Fitri</title>
+<title>Selamat Idul Fitri</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- BACKGROUND -->
-<div class="bg"></div>
+<audio id="music" src="music.mp3" loop autoplay muted></audio>
 
-<!-- KETUPAT -->
-<div class="ketupat"></div>
-<div class="ketupat k2"></div>
+<div class="card">
 
-<!-- KONTEN -->
-<div class="container">
+  <!-- FOTO -->
+  <img src="https://i.ibb.co.com/Pspvz9RZ/foto.png" class="foto">
 
-  <h1>🌙 Selamat Hari Raya</h1>
+  <!-- TEXT -->
+  <h1>Selamat Hari Raya</h1>
   <h2>Idul Fitri</h2>
 
   <p class="text">
-    Mohon Maaf Lahir & Batin 🙏 <br>
-    Taqabbalallahu minna wa minkum <br>
-    Semoga kita kembali fitri dan penuh keberkahan
+    Mohon Maaf Lahir & Batin
   </p>
-
-  <h3 id="nama"></h3>
 
   <p class="tahun">1447 H / 2026 M</p>
 
-  <button onclick="shareWA()">📤 Share WhatsApp</button>
+  <!-- NAMA -->
+  <h3 id="nama"></h3>
+
+  <!-- BUTTON -->
+  <button onclick="toggleMusic()">🎵 Musik</button>
+  <button onclick="shareWA()">📤 Share</button>
 
 </div>
 
-<canvas id="firework"></canvas>
-
 <script src="script.js"></script>
-
 </body>
 </html>
