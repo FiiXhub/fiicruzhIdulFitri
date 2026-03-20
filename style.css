@@ -1,20 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin:0;
+  font-family:'Segoe UI',sans-serif;
   background:black;
   display:flex;
   justify-content:center;
   align-items:center;
-  height:100vh;
-  font-family:sans-serif;
+  min-height:100vh;
 }
 
+/* WRAPPER */
 .wrapper {
   width:100%;
   max-width:420px;
+  height:100vh;
+  max-height:100dvh;
   aspect-ratio:9/16;
+  display:flex;
+  justify-content:center;
+  align-items:center;
   perspective:1200px;
 }
 
+/* CARD */
 .card {
   width:100%;
   height:100%;
@@ -27,12 +38,14 @@ body {
   transform:rotateY(180deg);
 }
 
+/* SIDE */
 .front, .back {
   position:absolute;
   width:100%;
   height:100%;
   border-radius:20px;
   backface-visibility:hidden;
+  overflow:hidden;
 }
 
 /* DEPAN */
@@ -42,6 +55,7 @@ body {
   justify-content:center;
   align-items:center;
   color:white;
+  font-size:clamp(16px,4vw,22px);
 }
 
 /* DALAM */
@@ -50,26 +64,36 @@ body {
   background: radial-gradient(circle,#0f2027,#000);
   text-align:center;
   color:white;
-  padding:15px;
+  padding:20px 15px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
 }
 
+/* FOTO */
 .foto {
-  width:100px;
-  height:100px;
+  width:clamp(80px,25vw,120px);
+  height:clamp(80px,25vw,120px);
   border-radius:50%;
   border:3px solid gold;
-  margin:10px;
+  margin:auto;
 }
 
-h2 {color:gold;}
-#nama {color:gold;}
+/* TEXT */
+h1 {font-size:clamp(16px,4vw,22px);}
+h2 {font-size:clamp(24px,6vw,32px);color:gold;}
+.text {font-size:clamp(13px,3.5vw,15px);line-height:1.6;}
+.tahun {font-size:clamp(12px,3vw,14px);opacity:0.7;}
+#nama {font-size:clamp(14px,4vw,18px);color:gold;}
 
+/* BUTTON */
 button {
-  padding:10px;
+  padding:clamp(8px,3vw,12px);
   border:none;
   border-radius:20px;
   background:gold;
   cursor:pointer;
+  font-size:clamp(12px,3vw,14px);
 }
 
 /* PARTICLES */
@@ -81,10 +105,9 @@ canvas {
   height:100%;
 }
 
-/* HP FIX */
-@media(max-width:500px){
+/* DESKTOP */
+@media (min-width:1024px){
   .wrapper {
-    height:100vh;
-    max-width:100%;
+    height:90vh;
   }
 }
