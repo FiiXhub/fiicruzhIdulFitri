@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Selamat Idul Fitri</title>
+<title>Ucapan Idul Fitri</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,27 +11,52 @@
 
 <audio id="music" src="music.mp3" loop autoplay muted></audio>
 
-<div class="card">
+<!-- CARD WRAP -->
+<div class="wrapper">
 
-  <!-- FOTO -->
-  <img src="https://i.ibb.co.com/Pspvz9RZ/foto.png" class="foto">
+  <div class="card" id="card">
 
-  <!-- TEXT -->
-  <h1>Selamat Hari Raya</h1>
-  <h2>Idul Fitri</h2>
+    <!-- DEPAN (cover) -->
+    <div class="front" onclick="openCard()">
+      <h2>🌙 Klik untuk membuka</h2>
+    </div>
 
-  <p class="text">
-    Mohon Maaf Lahir & Batin
-  </p>
+    <!-- DALAM -->
+    <div class="back">
 
-  <p class="tahun">1447 H / 2026 M</p>
+      <!-- MASJID -->
+      <div class="mosque"></div>
 
-  <!-- NAMA -->
-  <h3 id="nama"></h3>
+      <!-- FOTO -->
+      <img src="https://i.ibb.co.com/Pspvz9RZ/foto.png" class="foto">
 
-  <!-- BUTTON -->
-  <button onclick="toggleMusic()">🎵 Musik</button>
-  <button onclick="shareWA()">📤 Share</button>
+      <h1>Selamat Hari Raya</h1>
+      <h2>Idul Fitri</h2>
+
+      <p class="text">
+        Taqabbalallahu minna wa minkum  
+        Shiyamana wa shiyamakum 🤍<br><br>
+
+        Di hari yang suci ini,  
+        izinkan kami memohon maaf  
+        atas segala khilaf dan salah 🙏<br><br>
+
+        Semoga Allah menerima amal ibadah kita,  
+        melimpahkan keberkahan,  
+        dan mempertemukan kita kembali  
+        dengan Ramadhan berikutnya 🌙
+      </p>
+
+      <p class="tahun">1447 H / 2026 M</p>
+
+      <h3 id="nama"></h3>
+
+      <button onclick="toggleMusic()">🎵 Musik</button>
+      <button onclick="shareWA()">📤 Share</button>
+
+    </div>
+
+  </div>
 
 </div>
 
