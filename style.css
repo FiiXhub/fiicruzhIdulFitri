@@ -3,25 +3,29 @@
 body{
   font-family:sans-serif;
   overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+  background:black;
 }
 
-/* VIDEO */
-#bgVideo{
-  position:fixed;
+/* FAKE VIDEO BACKGROUND */
+.bg-anim{
+  position:absolute;
   width:100%;
   height:100%;
-  object-fit:cover;
-  z-index:-2;
+  background:
+    radial-gradient(circle at 70% 20%, rgba(255,215,0,0.3), transparent 40%),
+    radial-gradient(circle at 30% 80%, rgba(255,215,0,0.15), transparent 50%),
+    linear-gradient(#0f2027,#000);
+  animation:zoomBg 20s infinite alternate;
+  z-index:-3;
 }
 
-/* DARK OVERLAY */
-body::after{
-  content:"";
-  position:fixed;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-  z-index:-1;
+@keyframes zoomBg{
+  0%{transform:scale(1);}
+  100%{transform:scale(1.1);}
 }
 
 /* WRAPPER */
@@ -29,10 +33,10 @@ body::after{
   width:100%;
   max-width:420px;
   height:100vh;
-  margin:auto;
+  aspect-ratio:9/16;
   display:flex;
-  align-items:center;
   justify-content:center;
+  align-items:center;
   perspective:1200px;
 }
 
@@ -48,12 +52,13 @@ body::after{
   transform:rotateY(180deg);
 }
 
+/* SIDE */
 .front,.back{
   position:absolute;
   width:100%;
   height:100%;
-  backface-visibility:hidden;
   border-radius:20px;
+  backface-visibility:hidden;
 }
 
 /* FRONT */
@@ -68,21 +73,21 @@ body::after{
 /* BACK */
 .back{
   transform:rotateY(180deg);
+  padding:20px;
   text-align:center;
   color:white;
-  padding:20px;
 }
 
 /* FOTO */
 .foto{
-  width:110px;
-  height:110px;
+  width:clamp(90px,25vw,120px);
+  height:clamp(90px,25vw,120px);
   border-radius:50%;
   border:3px solid gold;
   margin:auto;
 }
 
-/* MOON */
+/* BULAN */
 .moon{
   position:absolute;
   top:40px;
@@ -91,10 +96,10 @@ body::after{
   height:60px;
   background:gold;
   border-radius:50%;
-  box-shadow:0 0 20px gold;
+  box-shadow:0 0 30px gold;
 }
 
-/* STARS */
+/* BINTANG */
 .stars{
   position:absolute;
   width:100%;
@@ -108,12 +113,12 @@ body::after{
   to{background-position:1000px 1000px;}
 }
 
-/* MOSQUE */
+/* MASJID */
 .mosque{
   position:absolute;
   bottom:0;
   width:100%;
-  height:200px;
+  height:180px;
   background:url("https://i.ibb.co/4W2DGKm/mosque.png") bottom/contain no-repeat;
   animation:glow 2s infinite alternate;
 }
@@ -125,8 +130,12 @@ body::after{
 
 /* TEXT */
 h2{color:gold;}
+.text{font-size:clamp(13px,3.5vw,15px);}
+.tahun{opacity:0.7;}
+#nama{color:gold;}
+
+/* BUTTON */
 button{
-  margin-top:10px;
   padding:10px;
   border:none;
   border-radius:20px;
