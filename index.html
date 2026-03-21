@@ -3,12 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ucapan Idul Fitri</title>
+<title>Ucapan Lebaran Ultra</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- VIDEO BACKGROUND -->
+<video autoplay muted loop id="bgVideo">
+  <source src="bg.mp4" type="video/mp4">
+</video>
+
+<!-- MUSIC -->
 <audio id="music1" src="music1.mp3" loop autoplay muted></audio>
 <audio id="music2" src="music2.mp3" loop></audio>
 
@@ -18,34 +24,38 @@
 
     <!-- DEPAN -->
     <div class="front" onclick="openCard()">
-      <h2>🌙 Tap untuk membuka</h2>
+      <h2>🌙 Buka Ucapan</h2>
     </div>
 
     <!-- DALAM -->
     <div class="back">
 
-      <canvas id="particles"></canvas>
+      <!-- BULAN -->
+      <div class="moon"></div>
+
+      <!-- BINTANG -->
+      <div class="stars"></div>
+
+      <!-- MASJID -->
+      <div class="mosque"></div>
 
       <img id="foto" class="foto">
 
-      <div>
+      <div class="content">
         <h1>Selamat Hari Raya</h1>
         <h2>Idul Fitri</h2>
 
         <p class="text">
-          Taqabbalallahu minna wa minkum 🤍<br><br>
+          🌙 Taqabbalallahu minna wa minkum 🤍<br><br>
           Mohon maaf lahir dan batin 🙏<br><br>
-          Semoga kebahagiaan dan keberkahan selalu menyertai kita semua
+          Semoga keberkahan selalu menyertai kita semua ✨
         </p>
 
         <p class="tahun">1447 H / 2026 M</p>
-
         <h3 id="nama"></h3>
       </div>
 
-      <div>
-        <button onclick="shareWA()">📤 Share WhatsApp</button>
-      </div>
+      <button onclick="shareWA()">📤 Share WhatsApp</button>
 
     </div>
 
