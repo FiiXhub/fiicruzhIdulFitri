@@ -22,8 +22,8 @@ function openCard(){
   m2.play();
 }
 
-// SHARE
+// SHARE WA
 function shareWA(){
   const link = window.location.href;
-  window.open(`https://wa.me/?text=${encodeURIComponent("Selamat Idul Fitri 🙏\n"+link)}`);
+  window.open(`https://wa.me/?text=${encodeURIComponent("🌙 Selamat Idul Fitri 🙏\n"+link)}`);
 }
