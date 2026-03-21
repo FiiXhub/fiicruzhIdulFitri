@@ -3,16 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ucapan Lebaran Ultra</title>
+<title>Ucapan Idul Fitri</title>
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
-<!-- VIDEO BACKGROUND -->
-<video autoplay muted loop id="bgVideo">
-  <source src="bg.mp4" type="video/mp4">
-</video>
 
 <!-- MUSIC -->
 <audio id="music1" src="music1.mp3" loop autoplay muted></audio>
@@ -24,11 +19,14 @@
 
     <!-- DEPAN -->
     <div class="front" onclick="openCard()">
-      <h2>🌙 Buka Ucapan</h2>
+      <h2>🌙 Tap untuk membuka</h2>
     </div>
 
     <!-- DALAM -->
     <div class="back">
+
+      <!-- BACKGROUND ANIMASI -->
+      <div class="bg-anim"></div>
 
       <!-- BULAN -->
       <div class="moon"></div>
@@ -39,6 +37,7 @@
       <!-- MASJID -->
       <div class="mosque"></div>
 
+      <!-- FOTO -->
       <img id="foto" class="foto">
 
       <div class="content">
@@ -48,7 +47,8 @@
         <p class="text">
           🌙 Taqabbalallahu minna wa minkum 🤍<br><br>
           Mohon maaf lahir dan batin 🙏<br><br>
-          Semoga keberkahan selalu menyertai kita semua ✨
+          Semoga Allah melimpahkan kebahagiaan, kesehatan,<br>
+          dan keberkahan untuk kita semua 🤲✨
         </p>
 
         <p class="tahun">1447 H / 2026 M</p>
